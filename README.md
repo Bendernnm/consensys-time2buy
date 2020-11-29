@@ -56,3 +56,16 @@ Some additional features:
 2. Give store owners the option to accept any **ERC-20 token.**
 3. Deploy your dApp to a **testnet**
 4. Serve the UI from **IPFS** or a traditional web server
+
+## Features
+
+1. As owner I can control marketplace's settings.
+2. As owner I can add admins.
+3. Send ERC20 tokens to users.
+4. As admin I can control potential sellers (approve, reject or block).
+5. As seller I can withdraw money from the store.
+6. As seller I can add new product.
+7. As seller I can remove product.
+8. As seller I can start auction.
+9. As user I can buy product.
+10. As user I can try my luck on auction (if I have ERC20 tokens).
