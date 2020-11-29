@@ -1,0 +1,47 @@
+<div>
+  <form [formGroup]="configFormGroup">
+    <div>
+      <label for="potentialSellersLimit">
+        Potential sellers limit:
+      </label>
+      <input id="potentialSellersLimit" type="number" formControlName="potentialSellersLimit">
+      <button (click)="change('0')">Change</button>
+    </div>
+
+    <div>
+      <label for="allowBecamePotentialSellers">
+        Allow Became Potential Seller:
+      </label>
+      <input id="allowBecamePotentialSellers" type="checkbox" formControlName="allowBecamePotentialSellers">
+      <button (click)="change('1')">Change</button>
+    </div>
+
+    <div>
+      <label for="stopped">
+        Stopped:
+      </label>
+      <input id="stopped" type="checkbox" formControlName="stopped">
+      <button (click)="change('2')">Change</button>
+    </div>
+    <div>
+      <label for="adminAddress">
+        Admin address:
+      </label>
+      <input id="adminAddress" type="text" formControlName="adminAddress">
+      <button (click)="change('3')">Add admin</button>
+    </div>
+
+    <div style="border: 1px solid blanchedalmond;">
+      <h2>Send tokens</h2>
+      <label for="address">
+        Address:
+      </label>
+      <input id="address" type="text" formControlName="address">
+      <label for="tokensCount">
+        Count:
+      </label>
+      <input id="tokensCount" type="number" formControlName="tokensCount">
+      <button (click)="change('4')">Send tokens</button>
+    </div>
+  </form>
+</div>

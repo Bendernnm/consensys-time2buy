@@ -1,0 +1,5 @@
+<div style="border: 1px solid black">
+  <p>Address: {{address}}</p>
+  <p>Balance: {{balance}} ethrs</p>
+  <button *ngIf="isNotRegistered" (click)="becameSeller()">Became a seller</button>
+</div>

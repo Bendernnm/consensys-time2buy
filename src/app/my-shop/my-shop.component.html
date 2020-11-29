@@ -1,0 +1,58 @@
+<div>
+  Balance: {{balance}} ethers
+
+  <button (click)="withdraw()">Withdraw</button>
+</div>
+
+<div>
+  <h2>Add new product</h2>
+
+  <div>
+    <form [formGroup]="newProductForm">
+      <div>
+        <label for="name">
+          Name:
+        </label>
+        <input id="name" type="text" formControlName="name">
+      </div>
+
+      <div>
+        <label for="description">
+          Description:
+        </label>
+        <input id="description" type="text" formControlName="description">
+      </div>
+
+      <div>
+        <label for="image">
+          Image:
+        </label>
+        <input id="image" type="file" formControlName="image" (change)="onFileChange($event)">
+      </div>
+
+      <div>
+        <label for="price">
+          Price:
+        </label>
+        <input id="price" type="number" formControlName="price">
+      </div>
+
+      <button (click)="addProduct()">Add product</button>
+    </form>
+  </div>
+
+</div>
+
+<div>
+  <div
+    style="border: 1px solid blanchedalmond"
+    *ngFor="let product of products">
+    <p>{{product.id}}</p>
+    <p>{{product.name}}</p>
+    <p>{{product.description}}</p>
+    <p>{{product.image}}</p>
+    <p>{{product.price}}</p>
+    <button (click)="remove(product.id)">Remove</button>
+    <button (click)="add2auction(product.id)">Add to auction</button>
+  </div>
+</div>

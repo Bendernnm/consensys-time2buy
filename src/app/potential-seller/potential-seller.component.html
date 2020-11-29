@@ -1,0 +1,20 @@
+<div>
+  <form [formGroup]="potentialSellerFormGroup">
+    <div>
+      <label for="address">
+        Add seller:
+      </label>
+      <input id="address" type="text" formControlName="address">
+      <button (click)="addSeller()">Add</button>
+    </div>
+  </form>
+</div>
+
+<div *ngFor="let potentialSeller of potentialSellers">
+  <p>
+    {{potentialSeller}}
+  </p>
+  <button (click)="approve(potentialSeller)">Approve</button>
+  <button (click)="reject(potentialSeller)">Reject</button>
+  <button (click)="block(potentialSeller)">Block</button>
+</div>

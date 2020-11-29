@@ -1,0 +1,12 @@
+<div>
+  <div
+    style="border: 1px solid blanchedalmond"
+    *ngFor="let product of products">
+    <p>{{product.id}}</p>
+    <p>{{product.name}}</p>
+    <p>{{product.description}}</p>
+    <p>{{product.image}}</p>
+    <p>{{product.price}}</p>
+    <button (click)="buy(product.id, product.price)">Buy</button>
+  </div>
+</div>

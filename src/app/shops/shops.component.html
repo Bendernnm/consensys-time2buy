@@ -1,0 +1,7 @@
+<div
+  style="border: 1px solid grey"
+  *ngFor="let store of stores">
+  <p>Name: {{store.name}}</p>
+  <p>Address: {{store.address}}</p>
+  <button (click)="shopDetails(store.address)">Go to</button>
+</div>

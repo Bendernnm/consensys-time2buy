@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" href="#">Time2Buy</a>
+  <div class=" navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/shops']">Shops</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/auction']">Auction</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" *ngIf="isSeller">
+        <a class="nav-link" [routerLink]="['/my-shop']">My shop</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" *ngIf="isAdmin">
+        <a class="nav-link" [routerLink]="['/potential-sellers']">Potential sellers</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" *ngIf="isOwner">
+        <a class="nav-link" [routerLink]="['/config']">Config</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--<div>-->
+<!--  <div>-->
+<!--    <span>-->
+<!--      <a routerLink="/shops">Shops</a>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <span>-->
+<!--      <a routerLink="/auction">Auction</a>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <span>-->
+<!--      <a routerLink="/my shop">My shop</a>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <span>-->
+<!--      <a routerLink="/potential-sellers">Potential sellers</a>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <span>-->
+<!--      <a routerLink="/config">Config</a>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--</div>-->

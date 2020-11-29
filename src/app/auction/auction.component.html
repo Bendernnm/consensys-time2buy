@@ -1,0 +1,19 @@
+<div>
+  <div
+    style="border: 1px solid blanchedalmond"
+    *ngFor="let auctionDetails of auctionsDetails">
+    <p>{{auctionDetails.lot.name}}</p>
+    <p>{{auctionDetails.lot.description}}</p>
+    <p>{{auctionDetails.lot.image}}</p>
+    <p>{{auctionDetails.lot.currentPrice}}</p>
+    <button *ngIf="auctionDetails.status === '1'"
+            (click)="bet(auctionDetails.auctionAddress, +auctionDetails.lot.currentPrice + 5)">
+      Bet +5
+    </button>
+    <button
+      *ngIf="auctionDetails.status === '1' && currentAccount.toUpperCase() === auctionDetails.seller.toUpperCase()"
+      (click)="finish(auctionDetails.auctionAddress)">
+      Finish
+    </button>
+  </div>
+</div>
